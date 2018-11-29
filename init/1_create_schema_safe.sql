@@ -1,0 +1,15 @@
+CREATE SMALLFILE TABLESPACE "SAFE"
+ DATAFILE
+ 'safe.dbf' SIZE 100M AUTOEXTEND ON NEXT 100M
+ LOGGING
+ DEFAULT NOCOMPRESS
+ ONLINE
+ EXTENT MANAGEMENT LOCAL AUTOALLOCATE
+ SEGMENT SPACE MANAGEMENT AUTO;
+
+
+create user "SAFE" identified by safe profile "DEFAULT" account unlock default tablespace  "SAFE" temporary tablespace "TEMP";
+grant "CONNECT" to "SAFE";
+grant "RESOURCE" to "SAFE";
+grant UNLIMITED TABLESPACE to "SAFE";
+
