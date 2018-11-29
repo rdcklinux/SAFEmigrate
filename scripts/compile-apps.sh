@@ -17,16 +17,15 @@ compile_dotnet(){
   cd ~/safe_project/src/web.net;
   git pull origin master;
   mono ~/safe_project/nuget restore .
-  msbuild administradorSAFE /p:Configuration=Release;
-
+  msbuild administradorSAFE /p:Configuration=Release /p:OutputPath=../dist;
   rm -rf /opt/apps/web/safews;
-  cp -r administradorSAFE /opt/apps/web/safews;
+  mv dist/_PublishedWebsites/administradorSAFE /opt/apps/web/safews;
+  rm -rf dist
 }
 
 compile_angular(){
-  cd ~/safe_project/src/web.net;
+  cd ~/safe_project/src/web.net/administradorSAFE/Angular;
   git pull origin master;
-  cd administradorSAFE/Angular;
   npm install;
   ng build --output-path=/opt/apps/web/front;
 }
