@@ -8,5 +8,5 @@ echo 'quit;' >> upxe.sql;
 
 sudo docker cp upxe.sql oracle:/tmp;
 rm upxe.sql;
-sudo docker exec -it oracle sqlplus SAFE/safe @/tmp/upxe.sql
+sudo docker exec -it oracle env NLS_LANG=SPANISH_CHILE.AL32UTF8 sqlplus SAFE/safe @/tmp/upxe.sql
 
