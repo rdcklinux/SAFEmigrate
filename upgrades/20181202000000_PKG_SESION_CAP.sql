@@ -80,7 +80,7 @@ IF contar = 1 THEN
   RETURNING id_ses_cap INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF; 
 END sesion_cap_eliminar;
@@ -119,7 +119,7 @@ IF contar = 1 THEN
   WHERE ID_SESION_CAP = id_ses_cap RETURNING id_ses_cap INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF;  
 END sesion_cap_modificar;
@@ -139,7 +139,7 @@ IF contar = 1 THEN
   WHERE ID_SESION_CAP = id_ses_cap AND ESTADO > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF; 
 END sesion_cap_consultar;

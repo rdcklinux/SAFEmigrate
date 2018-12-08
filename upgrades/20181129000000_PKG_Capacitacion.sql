@@ -42,7 +42,7 @@ IF contar = 0 THEN
   WHERE ID_CAP = (SELECT MAX(ID_CAP) FROM CAPACITACION);
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20001, 'La Capacitaci髇 Existe, No se puede agregar al sistema');
+  RAISE_APPLICATION_ERROR(-20001, 'La Capacitaci贸n Existe, No se puede agregar al sistema');
   ROLLBACK;
 END IF;  
 END cap_agregar;
@@ -61,7 +61,7 @@ IF contar = 1 THEN
   RETURNING id_capacitacion INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La Capcitacion NO Existe, Verifique Capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La Capcitacion NO Existe, Verifique Capacitaci贸n');
   ROLLBACK;
 END IF; 
 END cap_eliminar;
@@ -88,7 +88,7 @@ IF contar = 1 THEN
   WHERE ID_CAP = id_capacitacion RETURNING id_capacitacion INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La Capacitacion NO Existe, Verifique Capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La Capacitacion NO Existe, Verifique Capacitaci贸n');
   ROLLBACK;
 END IF;  
 END cap_modificar;
@@ -107,7 +107,7 @@ IF contar = 1 THEN
   WHERE ID_CAP = id_capacitacion AND ESTADO_CAPACITACION > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La Capacitacion NO Existe, Verifique Capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La Capacitacion NO Existe, Verifique Capacitaci贸n');
   ROLLBACK;
 END IF; 
 END cap_consultar;

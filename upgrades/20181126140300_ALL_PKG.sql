@@ -43,7 +43,7 @@ IF contar = 0 THEN
   WHERE ID_CAP = (SELECT MAX(ID_CAP) FROM CAPACITACION);
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20001, 'La Capacitaci髇 Existe, No se puede agregar al sistema');
+  RAISE_APPLICATION_ERROR(-20001, 'La Capacitaci贸n Existe, No se puede agregar al sistema');
   ROLLBACK;
 END IF;  
 END cap_agregar;
@@ -62,7 +62,7 @@ IF contar = 1 THEN
   RETURNING id_capacitacion INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La Capcitacion NO Existe, Verifique Capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La Capcitacion NO Existe, Verifique Capacitaci贸n');
   ROLLBACK;
 END IF; 
 END cap_eliminar;
@@ -89,7 +89,7 @@ IF contar = 1 THEN
   WHERE ID_CAP = id_capacitacion RETURNING id_capacitacion INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La Capacitacion NO Existe, Verifique Capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La Capacitacion NO Existe, Verifique Capacitaci贸n');
   ROLLBACK;
 END IF;  
 END cap_modificar;
@@ -108,7 +108,7 @@ IF contar = 1 THEN
   WHERE ID_CAP = id_capacitacion AND ESTADO_CAPACITACION > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La Capacitacion NO Existe, Verifique Capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La Capacitacion NO Existe, Verifique Capacitaci贸n');
   ROLLBACK;
 END IF; 
 END cap_consultar;
@@ -450,7 +450,7 @@ IF contar = 0 THEN
   WHERE ID_ESTADO = (SELECT MAX(ID_ESTADO) FROM Estado_Eval_Terr);
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20001, 'Estado evaluaci髇 terreno Existe, No se puede agregar el estado al sistema');
+  RAISE_APPLICATION_ERROR(-20001, 'Estado evaluaci贸n terreno Existe, No se puede agregar el estado al sistema');
   ROLLBACK;
 END IF;  
 END estado_eval_terr_agregar;
@@ -469,7 +469,7 @@ IF contar = 1 THEN
   RETURNING id_est INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El estado de evaluaci髇 en terreno NO Existe, Verifique estado');
+  RAISE_APPLICATION_ERROR(-20002, 'El estado de evaluaci贸n en terreno NO Existe, Verifique estado');
   ROLLBACK;
 END IF; 
 END estado_eval_terr_eliminar;
@@ -492,7 +492,7 @@ IF contar = 1 THEN
   WHERE ID_ESTADO = id_est RETURNING id_est INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El estado de evaluaci髇 en terreno NO Existe, Verifique estado');
+  RAISE_APPLICATION_ERROR(-20002, 'El estado de evaluaci贸n en terreno NO Existe, Verifique estado');
   ROLLBACK;
 END IF;  
 END estado_eval_terr_modificar;
@@ -511,7 +511,7 @@ IF contar = 1 THEN
   WHERE ID_ESTADO = id_est AND ESTADO > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El estado de evaluaci髇 en terreno NO Existe, Verifique estado');
+  RAISE_APPLICATION_ERROR(-20002, 'El estado de evaluaci贸n en terreno NO Existe, Verifique estado');
   ROLLBACK;
 END IF; 
 END estado_eval_terr_consultar;
@@ -576,7 +576,7 @@ IF contar = 0 THEN
   WHERE ID_EVAL_TERR = (SELECT MAX(ID_EVAL_TERR) FROM EVAL_TERR);
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20001, 'La evaluaci髇 en terreno Existe, No se puede agregar la evaluaci髇 al sistema');
+  RAISE_APPLICATION_ERROR(-20001, 'La evaluaci贸n en terreno Existe, No se puede agregar la evaluaci贸n al sistema');
   ROLLBACK;
 END IF;  
 END eval_terr_agregar;
@@ -595,7 +595,7 @@ IF contar = 1 THEN
   RETURNING id_eval_t INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La evaluaci髇 NO Existe, Verifique Evaluaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La evaluaci贸n NO Existe, Verifique Evaluaci贸n');
   ROLLBACK;
 END IF; 
 END eval_terr_eliminar;
@@ -624,7 +624,7 @@ IF contar = 1 THEN
   WHERE ID_EVAL_TERR = id_eval_t RETURNING id_eval_t INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La evaluaci髇 NO Existe, Verifique Evaluaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La evaluaci贸n NO Existe, Verifique Evaluaci贸n');
   ROLLBACK;
 END IF;  
 END eval_terr_modificar;
@@ -643,7 +643,7 @@ IF contar = 1 THEN
   WHERE ID_EVAL_TERR = id_eval_t AND ESTADO > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La evaluaci髇 NO Existe, Verifique Evaluaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La evaluaci贸n NO Existe, Verifique Evaluaci贸n');
   ROLLBACK;
 END IF; 
 END eval_terr_consultar;
@@ -1462,7 +1462,7 @@ IF contar = 0 THEN
   WHERE ID_MEDICO = (SELECT MAX(ID_MEDICO) FROM MEDICO);
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20001, 'El m閐ico Existe, No se puede agregar el m閐ico al sistema');
+  RAISE_APPLICATION_ERROR(-20001, 'El m茅dico Existe, No se puede agregar el m茅dico al sistema');
   ROLLBACK;
 END IF;  
 END medico_agregar;
@@ -1481,7 +1481,7 @@ IF contar = 1 THEN
   RETURNING id_med INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El m閐ico NO Existe, Verifique m閐ico');
+  RAISE_APPLICATION_ERROR(-20002, 'El m茅dico NO Existe, Verifique m茅dico');
   ROLLBACK;
 END IF; 
 END medico_eliminar;
@@ -1512,7 +1512,7 @@ IF contar = 1 THEN
   WHERE ID_MEDICO = id_med RETURNING id_med INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El m閐ico NO Existe, Verifique m閐ico');
+  RAISE_APPLICATION_ERROR(-20002, 'El m茅dico NO Existe, Verifique m茅dico');
   ROLLBACK;
 END IF;  
 END medico_modificar;
@@ -1531,7 +1531,7 @@ IF contar = 1 THEN
   WHERE ID_MEDICO = id_med AND ESTADO_MEDICO > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El m閐ico NO Existe, Verifique m閐ico');
+  RAISE_APPLICATION_ERROR(-20002, 'El m茅dico NO Existe, Verifique m茅dico');
   ROLLBACK;
 END IF; 
 END medico_consultar;
@@ -1592,7 +1592,7 @@ IF contar = 0 THEN
   WHERE ID_OBS_INGENIERO = (SELECT MAX(ID_OBS_INGENIERO) FROM OBS_INGENIERO);
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20001, 'La observaci髇 Existe, No se puede agregar observaci髇 al sistema');
+  RAISE_APPLICATION_ERROR(-20001, 'La observaci贸n Existe, No se puede agregar observaci贸n al sistema');
   ROLLBACK;
 END IF;  
 END obs_ingeniero_agregar;
@@ -1611,7 +1611,7 @@ IF contar = 1 THEN
   RETURNING id_obs_ing INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La observaci髇 NO Existe, Verifique observaciones');
+  RAISE_APPLICATION_ERROR(-20002, 'La observaci贸n NO Existe, Verifique observaciones');
   ROLLBACK;
 END IF; 
 END obs_ingeniero_eliminar;
@@ -1638,7 +1638,7 @@ IF contar = 1 THEN
   WHERE ID_OBS_INGENIERO = id_obs_ing RETURNING id_obs_ing INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La observaci髇 NO Existe, Verifique observaciones');
+  RAISE_APPLICATION_ERROR(-20002, 'La observaci贸n NO Existe, Verifique observaciones');
   ROLLBACK;
 END IF;  
 END obs_ingeniero_modificar;
@@ -1657,7 +1657,7 @@ IF contar = 1 THEN
   WHERE ID_OBS_INGENIERO = id_obs_ing AND ESTADO > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La observaci髇 NO Existe, Verifique observaciones');
+  RAISE_APPLICATION_ERROR(-20002, 'La observaci贸n NO Existe, Verifique observaciones');
   ROLLBACK;
 END IF; 
 END obs_ingeniero_consultar;
@@ -1718,7 +1718,7 @@ IF contar = 0 THEN
   WHERE ID_OBS_SUPERVISOR = (SELECT MAX(ID_OBS_SUPERVISOR) FROM OBS_SUPERVISOR);
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20001, 'La observaci髇 Existe, No se puede agregar observaci髇 al sistema');
+  RAISE_APPLICATION_ERROR(-20001, 'La observaci贸n Existe, No se puede agregar observaci贸n al sistema');
   ROLLBACK;
 END IF;  
 END obs_supervisor_agregar;
@@ -1737,7 +1737,7 @@ IF contar = 1 THEN
   RETURNING id_obs_sup INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La observaci髇 NO Existe, Verifique observaciones');
+  RAISE_APPLICATION_ERROR(-20002, 'La observaci贸n NO Existe, Verifique observaciones');
   ROLLBACK;
 END IF; 
 END obs_supervisor_eliminar;
@@ -1764,7 +1764,7 @@ IF contar = 1 THEN
   WHERE ID_OBS_SUPERVISOR = id_obs_sup RETURNING id_obs_sup INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La observaci髇 NO Existe, Verifique observaciones');
+  RAISE_APPLICATION_ERROR(-20002, 'La observaci贸n NO Existe, Verifique observaciones');
   ROLLBACK;
 END IF;  
 END obs_supervisor_modificar;
@@ -1783,7 +1783,7 @@ IF contar = 1 THEN
   WHERE ID_OBS_SUPERVISOR = id_obs_sup AND ESTADO > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La observaci髇 NO Existe, Verifique observaciones');
+  RAISE_APPLICATION_ERROR(-20002, 'La observaci贸n NO Existe, Verifique observaciones');
   ROLLBACK;
 END IF; 
 END obs_supervisor_consultar;
@@ -2124,7 +2124,7 @@ IF contar = 1 THEN
   RETURNING id_ses_cap INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF; 
 END sesion_cap_eliminar;
@@ -2163,7 +2163,7 @@ IF contar = 1 THEN
   WHERE ID_SESION_CAP = id_ses_cap RETURNING id_ses_cap INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF;  
 END sesion_cap_modificar;
@@ -2183,7 +2183,7 @@ IF contar = 1 THEN
   WHERE ID_SESION_CAP = id_ses_cap AND ESTADO > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF; 
 END sesion_cap_consultar;
@@ -2284,7 +2284,7 @@ IF contar = 1 THEN
   RETURNING id_ses_salud INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF; 
 END sesion_salud_eliminar;
@@ -2323,7 +2323,7 @@ IF contar = 1 THEN
   WHERE ID_SESION_SALUD = id_ses_salud RETURNING id_ses_salud INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF;  
 END sesion_salud_modificar;
@@ -2343,7 +2343,7 @@ IF contar = 1 THEN
   WHERE ID_SESION_SALUD = id_ses_salud AND ESTADO > 0;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'La sesi髇 NO Existe, Verifique sesi髇');
+  RAISE_APPLICATION_ERROR(-20002, 'La sesi贸n NO Existe, Verifique sesi贸n');
   ROLLBACK;
 END IF; 
 END sesion_salud_consultar;
@@ -2536,7 +2536,7 @@ IF contar = 0 THEN
   WHERE ID_TIPO_CAP = (SELECT MAX(ID_TIPO_CAP) FROM TIPO_CAP);
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20001, 'El tipo de capacitaci髇 Existe, No se puede agregar tipo capacitaci髇 al sistema');
+  RAISE_APPLICATION_ERROR(-20001, 'El tipo de capacitaci贸n Existe, No se puede agregar tipo capacitaci贸n al sistema');
   ROLLBACK;
 END IF;  
 END tipo_cap_agregar;
@@ -2555,7 +2555,7 @@ IF contar = 1 THEN
   RETURNING id_tipo_capacitacion INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El tipo de capacitaci髇 NO Existe, Verifique tipo capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'El tipo de capacitaci贸n NO Existe, Verifique tipo capacitaci贸n');
   ROLLBACK;
 END IF; 
 END tipo_cap_eliminar;
@@ -2578,7 +2578,7 @@ IF contar = 1 THEN
   WHERE ID_TIPO_CAP = id_tipo_capacitacion RETURNING id_tipo_capacitacion INTO resp;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El tipo de capacitaci髇 NO Existe, Verifique tipo capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'El tipo de capacitaci贸n NO Existe, Verifique tipo capacitaci贸n');
   ROLLBACK;
 END IF;  
 END tipo_cap_modificar;
@@ -2597,7 +2597,7 @@ IF contar = 1 THEN
   WHERE ID_TIPO_CAP = id_tipo_capacitacion AND ESTADO > 1;
   COMMIT;
 ELSE
-  RAISE_APPLICATION_ERROR(-20002, 'El tipo de capacitaci髇 NO Existe, Verifique tipo capacitaci髇');
+  RAISE_APPLICATION_ERROR(-20002, 'El tipo de capacitaci贸n NO Existe, Verifique tipo capacitaci贸n');
   ROLLBACK;
 END IF; 
 END tipo_cap_consultar;
