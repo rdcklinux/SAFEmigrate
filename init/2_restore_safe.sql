@@ -454,7 +454,6 @@ BEGIN
 END;
 /
 
-
 create or replace TRIGGER EVAL_TERR_TGR
 BEFORE INSERT ON EVAL_TERR
 FOR EACH ROW
@@ -606,6 +605,3 @@ BEGIN
 :new.id_usuario := usuarios_auto_incr.nextval;
 END;
 /
-
-
-
