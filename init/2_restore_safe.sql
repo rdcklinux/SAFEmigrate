@@ -452,7 +452,7 @@ FOR EACH ROW
 BEGIN
 :new.id_estado := estado_eval_terr_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER EVAL_TERR_TGR
 BEFORE INSERT ON EVAL_TERR
