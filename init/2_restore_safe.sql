@@ -421,13 +421,14 @@ CREATE sequence Usuarios_auto_incr start with 1 increment by 1;
 
 CREATE sequence tipoVisitTer_auto_incr start with 1 increment by 1;
 
+
 create or replace TRIGGER CAPACITACION_TGR
 BEFORE INSERT ON CAPACITACION
 FOR EACH ROW
 BEGIN
 :new.id_cap := capacitacion_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER CERTIFICADO_TGR
 BEFORE INSERT ON CERTIFICADO
@@ -435,7 +436,7 @@ FOR EACH ROW
 BEGIN
 :new.id_certificado := certificado_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER CLIENTE_TGR
 BEFORE INSERT ON CLIENTE
@@ -443,7 +444,7 @@ FOR EACH ROW
 BEGIN
 :new.id_cliente := cliente_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER ESTADO_EVAL_TERR_TGR
 BEFORE INSERT ON ESTADO_EVAL_TERR
@@ -459,7 +460,7 @@ FOR EACH ROW
 BEGIN
 :new.id_eval_terr := eval_terr_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER EXAMENES_TGR
 BEFORE INSERT ON EXAMENES
@@ -467,7 +468,7 @@ FOR EACH ROW
 BEGIN
 :new.id_examen := examenes_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER EXPOSITOR_TGR
 BEFORE INSERT ON EXPOSITOR
@@ -475,7 +476,7 @@ FOR EACH ROW
 BEGIN
 :new.id_expositor := expositor_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER LIST_ASIS_CAP_TGR
 BEFORE INSERT ON LIST_ASIS_CAP
@@ -483,7 +484,7 @@ FOR EACH ROW
 BEGIN
 :new.id_lista_cap := list_asis_cap_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER LIST_TRAB_CAP_TGR
 BEFORE INSERT ON LIST_TRAB_CAP
@@ -491,7 +492,7 @@ FOR EACH ROW
 BEGIN
 :new.id_lis_trab_cap := list_trab_cap_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER LISTASISSALUD_TGR
 BEFORE INSERT ON LISTASISSALUD
@@ -499,7 +500,7 @@ FOR EACH ROW
 BEGIN
 :new.id_list_salud := listasissalud_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER LISTTRABSALUD_TGR
 BEFORE INSERT ON LISTTRABSALUD
@@ -507,7 +508,7 @@ FOR EACH ROW
 BEGIN
 :new.id_lis_trab_salud := listtrabsalud_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER MEDICO_TGR
 BEFORE INSERT ON MEDICO
@@ -515,7 +516,7 @@ FOR EACH ROW
 BEGIN
 :new.id_medico := medico_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER OBS_INGENIERO_TGR
 BEFORE INSERT ON OBS_INGENIERO
@@ -523,7 +524,7 @@ FOR EACH ROW
 BEGIN
 :new.id_obs_ingeniero := obs_ingeniero_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER OBS_SUPERVISOR_TGR
 BEFORE INSERT ON OBS_SUPERVISOR
@@ -531,7 +532,7 @@ FOR EACH ROW
 BEGIN
 :new.id_obs_supervisor := obs_supervisor_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER PLAN_CAP_TGR
 BEFORE INSERT ON PLAN_CAP
@@ -539,7 +540,7 @@ FOR EACH ROW
 BEGIN
 :new.id_plan_cap := plan_cap_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER PLAN_SALUD_TGR
 BEFORE INSERT ON PLAN_SALUD
@@ -547,7 +548,7 @@ FOR EACH ROW
 BEGIN
 :new.id_plan_salud := plan_salud_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER SESION_CAP_TGR
 BEFORE INSERT ON SESION_CAP
@@ -555,7 +556,7 @@ FOR EACH ROW
 BEGIN
 :new.id_sesion_cap := sesion_cap_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER SESION_SALUD_TGR
 BEFORE INSERT ON SESION_SALUD
@@ -563,7 +564,7 @@ FOR EACH ROW
 BEGIN
 :new.id_sesion_salud := sesion_salud_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER SOLIEVALTER_TGR
 BEFORE INSERT ON SOLIEVALTER
@@ -571,7 +572,7 @@ FOR EACH ROW
 BEGIN
 :new.id_solicitud := solievalter_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER TIPO_CAP_TGR
 BEFORE INSERT ON TIPO_CAP
@@ -579,7 +580,7 @@ FOR EACH ROW
 BEGIN
 :new.id_tipo_cap := tipo_cap_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER TIPO_EXAMEN_TGR
 BEFORE INSERT ON TIPO_EXAMEN
@@ -587,7 +588,7 @@ FOR EACH ROW
 BEGIN
 :new.id_tipo_exam := tipo_examen_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER TIPOVISITTER_TGR
 BEFORE INSERT ON TIPOVISITTER
@@ -595,7 +596,7 @@ FOR EACH ROW
 BEGIN
 :new.id_tipo_vister := tipovisitter_auto_incr.nextval;
 END;
-
+/
 
 create or replace TRIGGER USUARIOS_TGR
 BEFORE INSERT ON USUARIOS
@@ -603,5 +604,7 @@ FOR EACH ROW
 BEGIN
 :new.id_usuario := usuarios_auto_incr.nextval;
 END;
+/
+
 
 
